@@ -1,8 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import './App.css';
-
 import HomePage from './pages/homepage/homepage.component';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
