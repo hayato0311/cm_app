@@ -1,0 +1,67 @@
+.post-form{
+    margin-top:1px;
+    background-color: rgb(233, 228, 228);
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    
+}
+.post-content{
+    display: flex;
+    
+}
+
+.user{
+    width:70px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    img{
+        background-color: white;
+        border: solid 3px #6662622c;/*線*/
+        border-radius: 10px;/*角の丸み*/
+        
+    }
+}
+.comment{
+    box-sizing: border-box;
+    width: 90%;
+    height: 90px;
+    resize: none;
+    padding:5px;
+    margin-left:10px;
+}
+
+
+.btn-square {
+    box-sizing: border-box;
+    text-decoration: none;
+    background: #668ad8;
+    height: 40px;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-top: 3px;
+    
+  
+    /*ボタン色*/
+    color: #FFF;
+    border-bottom: solid 4px #627295;
+    border-radius: 3px;
+    border-color: transparent;
+  
+    &:active {
+      /*ボタンを押したとき*/
+      -webkit-transform: translateY(4px);
+      transform: translateY(4px);
+  
+      /*下に動く*/
+      border-bottom: none;
+  
+      /*線を消す*/
+    }
+  }
+

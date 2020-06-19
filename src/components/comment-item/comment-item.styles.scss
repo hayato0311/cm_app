@@ -1,0 +1,39 @@
+.comment-item{
+    box-sizing: border-box;
+    padding: 15px;
+    border: solid 1px rgb(189, 188, 188);/*線*/
+
+    .comment{
+        padding: 20px 0;
+        
+    }
+
+}
+
+
+
+.relation{
+    box-sizing: border-box;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+
+    .clap-count{
+        margin-left: 5px;
+        font-weight: bold;
+    }
+}
+
+.clap-button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+}
