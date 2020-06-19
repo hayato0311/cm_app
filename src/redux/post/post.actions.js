@@ -5,7 +5,7 @@ export const addArticle = article => ({
     payload: article,
 });
 
-export const addClap = article => ({
+export const addClap = clickInfo => ({
     type: PostActionTypes.ADD_CLAP,
-    payload: article,
+    payload: clickInfo,
 });

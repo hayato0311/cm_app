@@ -1,17 +1,10 @@
-export const decreaseClapPoint = (userData, targetUserData) => {
-
-    return userData.map(user =>
-        user.id === targetUserData.id
-            ? { ...user, clap_rest: user.clap_rest - 2 }
-            : user
-    );
-}
-
-export const increaseClappedPoint = (userData, targetUserData) => {
-
-    return userData.map(user =>
-        user.id === targetUserData.id
-            ? { ...user, clapped: user.clapped + 1 }
-            : user
-    );
+export const updateClapPoints = (userData, users) => {
+    Object.keys(userData).forEach(key => {
+        if (userData[key].id === users.clickedUser.id) {
+            userData[key].clapRest -= 2;
+        } else if (userData[key].id === users.recomender.id || userData[key].id === users.recomendedUser.id) {
+            userData[key].clapped += 1;
+        }
+    });
+    return { ...userData };
 }

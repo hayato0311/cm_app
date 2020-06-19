@@ -2,16 +2,12 @@
     box-sizing: border-box;
     padding: 15px;
     border: solid 1px rgb(189, 188, 188);/*線*/
-
     .comment{
-        padding: 20px 0;
-        
+        padding: 20px 0;   
     }
-
 }
 
-
-
+// button
 .relation{
     box-sizing: border-box;
     height: 50px;
@@ -36,4 +32,47 @@
     outline: none;
     padding: 0;
     appearance: none;
+}
+
+
+// tooltip
+.tooltip {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    p {
+        margin: 0;
+        padding: 0;
+    }
+}
+  
+.description {
+    display: none;
+    position: absolute;
+    padding: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.6em;
+    color: #fff;
+    border-radius: 5px;
+    background: #000;
+    width: 80px;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: -22px;
+        right: 70%;
+        border: 15px solid transparent;
+        border-top: 15px solid #000;
+        margin-left: -15px;
+        transform: rotateZ(180deg);
+    }
+}
+  
+.tooltip:hover .description {
+    display: inline-block;
+    top: 28px;
+    left: 0px;
 }

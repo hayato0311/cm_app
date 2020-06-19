@@ -57,9 +57,17 @@ class PostFrom extends React.Component {
                 uploadTime: `${year}/${month}/${day} ${hours}:${minutes}`,
                 id: this.props.articleId,
                 clap: 0,
-                clappedDict: {},
-                from: { name: this.props.currentUser.name, img: this.props.currentUser.img },
-                to: { name: this.props.targetUser.name, img: this.props.targetUser.img },
+                clapHistory: {},
+                from: {
+                    id: this.props.currentUser.id,
+                    name: this.props.currentUser.name,
+                    img: this.props.currentUser.img,
+                },
+                to: {
+                    id: this.props.targetUser.id,
+                    name: this.props.targetUser.name,
+                    img: this.props.targetUser.img,
+                },
             }
         };
         var textarea = this.myRef.current;
@@ -81,7 +89,7 @@ class PostFrom extends React.Component {
 
                         <SelectTargetUser />
                     </div>
-                    <textarea ref={this.myRef} id='post-comment' className="comment" placeholder="コメントを記入してください。" value={this.comment} onChange={this.handleCommentChange} required></textarea>
+                    <textarea ref={this.myRef} id='post-comment' className="comment" placeholder="5文字以上のコメントを記入してください。" value={this.comment} onChange={this.handleCommentChange} required></textarea>
                 </div>
                 {
                     this.state.btnHidden

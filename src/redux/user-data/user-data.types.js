@@ -1,4 +1,3 @@
 export const UserActionTypes = {
-    CLAP: 'CLAP',
-    CLAPPED: 'CLAPPED',
+    UPDATE_CLAP_POINTS: 'UPDATE_CLAP_POINTS',
 };

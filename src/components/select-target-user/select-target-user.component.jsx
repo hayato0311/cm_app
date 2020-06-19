@@ -5,22 +5,18 @@ import { setTargetUser } from '../../redux/user/user.actions';
 
 import './select-target-user.styles.scss'
 
-
-const SelectTargetUser = ({ currentUser, userList, userData, setTargetUser }) => (
+const SelectTargetUser = ({ currentUser, targetUser, userList, userData, setTargetUser }) => (
     <div className="select-user">
-        <select onChange={(e) => setTargetUser(userData[e.target.value])}>
+        <select value={`${!targetUser ? 'anonymous' : targetUser.name}`} onChange={(e) => setTargetUser(userData[e.target.value])}>
             <option key="0" value="anonymous"></option>
             {
                 userList.map((userName, id) => (
                     userName === currentUser.name
                         ? null
                         : <option key={id + 1} value={userName}>{userName}</option>
-
                 ))
             }
         </select>
-
-
     </div>
 );
 

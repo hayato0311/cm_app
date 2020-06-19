@@ -5,8 +5,8 @@ import SelectCurrentUser from '../select-current-user/select-current-user.compon
 
 import './user-profile.styles.scss'
 
-const UserProfile = ({ currentUser }) => {
-    const { img, clap_rest, claped } = currentUser;
+const UserProfile = ({ currentUser, userData }) => {
+    const { img, clapRest, clapped } = userData[currentUser.name];
     return (
         <div className="user-profile">
             <div className="user">
@@ -14,7 +14,7 @@ const UserProfile = ({ currentUser }) => {
                 <SelectCurrentUser />
             </div>
             <div className="clap-info">
-                拍手できる： {clap_rest} 拍手された: {claped}
+                拍手できる： {clapRest} 拍手された: {clapped}
             </div>
         </div>
     )
@@ -23,6 +23,7 @@ const UserProfile = ({ currentUser }) => {
 
 const mapStateToProps = state => ({
     currentUser: state.user.currentUser,
+    userData: state.userData.userData,
 });
 
 export default connect(mapStateToProps)(UserProfile);

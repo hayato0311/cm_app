@@ -18,7 +18,7 @@ const userReducer = (state = INITIAL_STATE, action) => {
         case UserActionTypes.SET_TARGET_USER:
             return {
                 ...state,
-                targetUser: action.payload
+                targetUser: !action.payload ? null : action.payload
             }
         default:
             return state;
