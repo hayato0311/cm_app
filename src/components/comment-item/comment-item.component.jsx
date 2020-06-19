@@ -13,7 +13,6 @@ class CommentItem extends React.Component {
 
     handlerClapClicked = event => {
         if (this.props.currentUser.clap_rest >= 2) {
-            console.log('aaaaaa');
             return (addClap({ articleId: event.target.id, userName: this.props.currentUser.name }),
                 clap(this.props.currentUser),
                 clapped(this.props.targetUser));
