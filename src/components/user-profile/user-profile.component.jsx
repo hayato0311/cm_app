@@ -14,7 +14,8 @@ const UserProfile = ({ currentUser, userData }) => {
                 <SelectCurrentUser />
             </div>
             <div className="clap-info">
-                拍手できる： {clapRest} 拍手された: {clapped}
+                拍手できる : {clapRest} <br />
+                拍手された : {clapped}
             </div>
         </div>
     )
